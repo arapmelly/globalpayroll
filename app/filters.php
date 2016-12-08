@@ -123,3 +123,13 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+Route::filter('create_member', function()
+{
+    if (! Entrust::can('create_member') ) // Checks the current user
+    {
+        return Redirect::back()->with('notice', 'you do not have permission to access this resource');
+    }
+});
+

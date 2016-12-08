@@ -20,20 +20,7 @@ class UserRepository
     public function signup($input)
     {
 
-        $organization = Organization::find(1);
-        $name = array_get($input, 'organization');
-
-        $org = new Organization;
-        $lcode = $org->encode($name);
-
-        $organization->name = $name;
-        $organization->licensed = 100;
-        $organization->license_code = $lcode;
-        $organization->update();
-
-
-        
-
+       
 
         $user = new User;
 

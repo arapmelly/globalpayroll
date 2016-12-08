@@ -46,6 +46,11 @@
                     <li>
                         <a href="{{ URL::to('automated/savings') }}"><i class="fa fa-cogs fa-fw"></i> Auto process Savings</a>
                     </li>
+
+
+                    <li>
+                        <a href="{{ URL::to('backup') }}"><i class="fa fa-cogs fa-fw"></i> Backup Database</a>
+                    </li>
                     
 
                    

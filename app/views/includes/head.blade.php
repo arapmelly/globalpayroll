@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>XARA CBS</title>
+    <title>XARA </title>
 
     <!-- Core CSS - Include with every page -->
     {{ HTML::style('css/bootstrap.min.css') }}
@@ -49,6 +49,18 @@
     $('#users').DataTable({
         aaSorting: [] 
     });
+    $('#vehs').DataTable({
+        aaSorting: [] 
+    });
+    $('#shs').DataTable({
+        aaSorting: [] 
+    });
+    $('#saves').DataTable({
+        aaSorting: [] 
+    });
+    $('#docs').DataTable({
+        aaSorting: [] 
+    });
     $('#mobile').DataTable();
     $('#rejected').DataTable();
     $('#app').DataTable();
@@ -61,6 +73,38 @@
   
 
 </script>
+
+<style type="text/css">
+
+   .right-inner-addon {
+    position: relative;
+   }
+   .right-inner-addon input {
+    padding-right: 30px;    
+   }
+   .right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+   }
+
+   .ui-datepicker {
+    padding: 0.2em 0.2em 0;
+    width: 550px;
+   }
+
+   tfoot {
+    display: table-header-group;
+   }
+
+   tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+    
+   </style>
 
 
 

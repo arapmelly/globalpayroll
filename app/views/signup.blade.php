@@ -21,12 +21,7 @@
         <input class="form-control" type="hidden" name="user_type" id="user_type" value="admin">
    
     <fieldset>
-        <div class="form-group">
-            <label for="username">Organization</label>
-            <input class="form-control" placeholder="organization name" type="text" name="organization" id="organization" value="{{{ Input::old('organization') }}}">
-        </div>
-
-        <hr>
+        
         <div class="form-group">
             <label for="username">{{{ Lang::get('confide::confide.username') }}}</label>
             <input class="form-control" placeholder="{{{ Lang::get('confide::confide.username') }}}" type="text" name="username" id="username" value="{{{ Input::old('username') }}}">

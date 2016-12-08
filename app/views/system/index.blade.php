@@ -12,6 +12,11 @@
 
 <div class="col-lg-3">
 
+	@if(Session::get('notice'))
+            <div class="alert alert-success">{{ Session::get('notice') }}</div>
+        @endif
+        
+
 {{ HTML::image("images/logo.png", "Logo") }}
 
 

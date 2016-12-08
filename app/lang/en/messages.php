@@ -14,6 +14,7 @@ return array(
 	*/
 	'dashboard' => array(
 		'members' => 'Manage Members',
+		'vehicles' => 'Manage Vehicles',
 		'loans' => 'Manage Loans',
 		'savings' => 'Manage Savings',
 		'shares' => 'Manage Shares',
@@ -35,6 +36,7 @@ return array(
 	'nav' => array(
 		'dashboard' => 'Dashboard',
 		'members' => 'Members',
+		'vehicles' => 'Vehicles',
 		'accounting' => 'Accounting',
 		'reports' => 'Reports',
 		'administration' => 'Administration',

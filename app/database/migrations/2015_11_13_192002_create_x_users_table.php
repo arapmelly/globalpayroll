@@ -24,7 +24,7 @@ class CreateXUsersTable extends Migration {
 			$table->timestamps();
 			$table->string('user_type', 20)->nullable()->default('admin');
 			$table->boolean('is_active')->nullable();
-			$table->integer('branch_id')->unsigned()->nullable()->index('branch_id');
+			$table->integer('phone')->nullable();
 		});
 	}
 

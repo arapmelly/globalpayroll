@@ -18,33 +18,7 @@ class TenantsTableSeeder extends Seeder {
 	public function run()
 	{
 		
-		$branch = new Branch;
-
-		$branch->name = 'Head Office';
-		$branch->save();
-
-
-		$currency = new Currency;
-
-		$currency->name = 'Kenyan Shillings';
-		$currency->shortname = 'KES';
-		$currency->save();
-
 		
-
-		$organization = new Organization;
-
-		$organization->name = null;
-		$organization->save();
-
-
-		$share = new Share;
-
-
-		$share->value = 0;
-		$share->transfer_charge = 0;
-		$share->charged_on = 'donor';
-		$share->save();
 
 
 

@@ -13,13 +13,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?php 
-
-    $organization = DB::table('organizations')->where('id', '=', 1)->pluck('name');
-
-    
-?> 
-                <a class="navbar-brand"  href="{{ URL::to('/')}}" > <?php echo $organization; ?></a>
+               
+                <a class="navbar-brand"  href="{{ URL::to('/')}}" > Lixnet Tech</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -41,29 +36,7 @@
                 </li>
 
 @if(Confide::user()->user_type != 'teller')
-                <li  >
-                    <a  href="{{ URL::to('members')}}">
-                        <i class="fa fa-users fa-fw"></i>  {{{ Lang::get('messages.nav.members') }}} 
-                    </a>
-                    
-                </li>
-
-
-                 
-
-                 <li  >
-                    <a  href="{{ URL::to('accounts')}}">
-                        <i class="fa fa-file fa-fw"></i>  {{{ Lang::get('messages.nav.accounting') }}} 
-                    </a>
-                    
-                </li>
-
-                <li  >
-                    <a  href="{{ URL::to('portal')}}">
-                        <i class="fa fa-random fa-fw"></i>  CSS 
-                    </a>
-                    
-                </li>
+              
 
                 <li  >
                     <a  href="{{ URL::to('reports')}}">
@@ -72,39 +45,28 @@
                     
                 </li>
 
+
+                 <li  >
+                    <a  href="{{ URL::to('admin')}}">
+                        <i class="fa fa-cogs fa-fw"></i>  Administration
+                    </a>
+                    
+                </li>
+
                 
 
-               <li class="dropdown" >
+               <!-- <li class="dropdown" >
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-cogs fa-fw"></i>  {{{ Lang::get('messages.nav.administration') }}} <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="{{ URL::to('organizations') }}"><i class="fa fa-home fa-fw"></i>  Organization</a>
-                        </li>
-                        <li class="divider"></li>
-
-                         <li><a href="{{ URL::to('loanproducts') }}"><i class="fa fa-barcode fa-fw"></i>  Loan Management</a>
-                        </li>
-                        <li class="divider"></li>
-
-                         <li><a href="{{ URL::to('savingproducts') }}"><i class="fa fa-user fa-fw"></i>  Savings Management</a>
-                        </li>
-                        <li class="divider"></li>
-
-                         <li><a href="{{ URL::to('shares/show/1') }}"><i class="fa fa-user fa-fw"></i>  Share Management</a>
-                        </li>
-                        <li class="divider"></li>
-
-                          <li><a href="{{ URL::to('charges') }}"><i class="fa fa-user fa-fw"></i>  Charge Management</a>
+                        <li><a href="{{ URL::to('payrolls/create') }}"><i class="fa fa-random fa-fw"></i>  Process Payroll</a>
                         </li>
                         
-                        <li class="divider"></li>
-                        <li><a href="{{ URL::to('system') }}"><i class="fa fa-sign-out fa-fw"></i> System</a>
-                        </li>
                         
                     </ul>
-                    <!-- /.dropdown-user -->
-                </li>
+                  
+                </li> -->
                 <!-- /.dropdown -->
 
 
@@ -148,55 +110,7 @@
                 <!-- /.dropdown -->
 
 
-                <li>
-                    
-
-                        
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        @if(Session::get('lang') == 'ks')
-                            Kiswahili
-                        @endif 
-
-                         @if(Session::get('lang') == 'en')
-                            English
-                        @endif 
-
-
-                         <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li>
-
-                            {{link_to_route('language.select', 'English', array('en'))}}
-
-                        </li>
-
-                       
-                        <li class="divider"></li>
-
-                         <li>
-
-                            {{link_to_route('language.select', 'Kiswahili', array('ks'))}}
-
-                        </li>
-
-                       
-                        <li class="divider"></li>
-                        
-
-
-                       
-
-                        
-                        
-                    </ul>
-
-                    
-
-                   
-
-                </li>
-
+                
 
                 
             
